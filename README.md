@@ -1,4 +1,4 @@
-# dynamic breadcrumb for NextJ 15 by [OpenStatus](https://www.openstatus.dev)
+# dynamic breadcrumb for Next.js 15 by [OpenStatus](https://www.openstatus.dev)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
