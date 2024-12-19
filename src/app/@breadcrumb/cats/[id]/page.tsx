@@ -6,7 +6,10 @@ import {
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-export default async function BreadcrumbSlot() {
+export default async function BreadcrumbSlot(
+	{ params }: { params: Promise<{ id: string }> },
+) {
+	const { id } = await params;
 	// Fetch our cat information from the database
 	const cat = await Promise.resolve({
 		name: "Garfield",

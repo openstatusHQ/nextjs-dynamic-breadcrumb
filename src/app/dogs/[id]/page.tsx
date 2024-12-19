@@ -1,5 +1,6 @@
 import Image from "next/image";
-export default async function CatPage({ params }: { params: { id: string } }) {
+export default async function DogPage({ params }: { params: Promise<{ id: string }> }) {
+	const { id } = await params;
 	const dog = await Promise.resolve({
 		name: "Odie",
 		url: "https://static.wikia.nocookie.net/garfield/images/a/ac/OdieCharacter.jpg",
