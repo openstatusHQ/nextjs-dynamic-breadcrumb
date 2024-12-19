@@ -6,7 +6,8 @@ import {
 	BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
-export default async function BreadcrumbSlot() {
+export default async function BreadcrumbSlot({ params }: { params: Promise<{ id: string }> }) {
+	const { id } = await params;
 	// Fetch dog from the api
 	const dog = await Promise.resolve({
 		name: "Odie",

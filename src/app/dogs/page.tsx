@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function CatsPage() {
+export default function DogsPage() {
 	return (
 		<div className="flex  flex-col items-center">
 			<h1>The dogs of OpenStatus</h1>
