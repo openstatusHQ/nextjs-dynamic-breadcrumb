@@ -9,12 +9,11 @@ import {
 import React from "react";
 import type { ReactElement } from "react";
 
-export default function BreadcrumbSlot({
-	params,
-}: { params: { all: string[] } }) {
-	const breadcrumbItems: ReactElement[] = [];
-	let breadcrumbPage: ReactElement = <></>;
-	for (let i = 0; i < params.all.length; i++) {
+export default async function BreadcrumbSlot(props: { params: Promise<{ all: string[] }> }) {
+    const params = await props.params;
+    const breadcrumbItems: ReactElement[] = [];
+    let breadcrumbPage: ReactElement = <></>;
+    for (let i = 0; i < params.all.length; i++) {
 		const route = params.all[i];
 		const href = `/${params.all.at(0)}/${route}`;
 		console.log("route", route);
@@ -37,7 +36,7 @@ export default function BreadcrumbSlot({
 		}
 	}
 
-	return (
+    return (
 		<Breadcrumb>
 			<BreadcrumbList>
 				<BreadcrumbItem>
